@@ -3,23 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "@craco/craco": "^7.0.0-alpha.0",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
-    "build": "npm run build:css && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -33,21 +36,10 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "postcss-cli": "^7.1.0",
-    "tailwindcss": "^1.2.0"
-  },
-  "description": "## Profile Card Project",
-  "main": "postcss.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/krofax/React-TailwindCSS.git"
-  },
   "author": "sajidnagari",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/krofax/React-TailwindCSS/issues"
-  },
-  "homepage": "https://github.com/krofax/React-TailwindCSS#readme"
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  }
 }

@@ -1,11 +1,13 @@
+import './App.css';
 
-import React from 'react';
 function App() {
   return (
-
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      Wellcome to UExel
+    <div className="App">
+      <h1 class="text-3xl font-bold underline">
+        Hello worlds!
+      </h1>
     </div>
   );
 }
+
 export default App;
